@@ -1,4 +1,15 @@
 .LineChart{
-    width: 600px;
-    height: 350px;
+    grid-area: t1;
+    padding: 10px;
+    background-color: rgb(129, 129, 129,0.4);
+    border-radius: 5px;
+    border: 1px solid black ;
+}
+
+.LineChart__title{
+    text-align: center;
+}
+
+.LineChart__chart{
+    /* border: 2px solid black */
 }

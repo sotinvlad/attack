@@ -11,10 +11,10 @@ const NetworkChart = () => {
             { id: 5, label: "192.168.0.5", title: "node 5 tootip text" }
         ],
         edges: [
-            { from: 1, to: 2 },
-            { from: 1, to: 3 },
-            { from: 2, to: 4 },
-            { from: 2, to: 5 }
+            { from: 2, to: 1 },
+            { from: 3, to: 1 },
+            { from: 4, to: 1 },
+            { from: 5, to: 1 }
         ]
     };
 
@@ -25,7 +25,7 @@ const NetworkChart = () => {
         edges: {
             color: "#000000"
         },
-        height: "350px"
+        height: "400px"
     };
 
     const events = {
@@ -34,15 +34,21 @@ const NetworkChart = () => {
         }
     };
     return (
+        
         <div className="NetworkChart">
-            <Graph
-                graph={graph}
-                options={options}
-                events={events}
-                getNetwork={network => {
-                    //  if you want access to vis.js network api you can set the state in a parent component using this property
-                }}
-            />
+            <h2 className = 'NetworkChart__title'>
+                Network Chart
+            </h2>
+            <div className = 'NetworkChart__chart'>
+                <Graph
+                    graph={graph}
+                    options={options}
+                    events={events}
+                    getNetwork={network => {
+                        //  if you want access to vis.js network api you can set the state in a parent component using this property
+                    }}
+                />
+            </div>
         </div>
     )
 }

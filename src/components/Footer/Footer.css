@@ -1,0 +1,8 @@
+.Footer{
+    background-color: rgba(20, 20, 20, 0.85);
+    grid-area: f;
+    color: red;
+    text-align: center;
+    border-radius: 50px;
+    height: 140px;
+}
