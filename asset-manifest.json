@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/attack/static/css/main.3b2ee36a.chunk.css",
-    "main.js": "/attack/static/js/main.31ed5e47.chunk.js",
-    "main.js.map": "/attack/static/js/main.31ed5e47.chunk.js.map",
+    "main.css": "/attack/static/css/main.f0d60ac1.chunk.css",
+    "main.js": "/attack/static/js/main.c648ef0d.chunk.js",
+    "main.js.map": "/attack/static/js/main.c648ef0d.chunk.js.map",
     "runtime-main.js": "/attack/static/js/runtime-main.e3cf30ae.js",
     "runtime-main.js.map": "/attack/static/js/runtime-main.e3cf30ae.js.map",
     "static/js/2.29cb683c.chunk.js": "/attack/static/js/2.29cb683c.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.70e84de9.chunk.js": "/attack/static/js/3.70e84de9.chunk.js",
     "static/js/3.70e84de9.chunk.js.map": "/attack/static/js/3.70e84de9.chunk.js.map",
     "index.html": "/attack/index.html",
-    "static/css/main.3b2ee36a.chunk.css.map": "/attack/static/css/main.3b2ee36a.chunk.css.map",
+    "static/css/main.f0d60ac1.chunk.css.map": "/attack/static/css/main.f0d60ac1.chunk.css.map",
     "static/js/2.29cb683c.chunk.js.LICENSE.txt": "/attack/static/js/2.29cb683c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e3cf30ae.js",
     "static/js/2.29cb683c.chunk.js",
-    "static/css/main.3b2ee36a.chunk.css",
-    "static/js/main.31ed5e47.chunk.js"
+    "static/css/main.f0d60ac1.chunk.css",
+    "static/js/main.c648ef0d.chunk.js"
   ]
 }
