@@ -1,6 +1,6 @@
 .Header{
     text-align: center;
-    background-color: rgba(20, 20, 20, 0.85);
-    color: red;
+    background-color: white;
+    color: black;
     grid-area: h;
 }

@@ -1,0 +1,13 @@
+.Threats{
+    grid-area: t2;
+    border-radius: 1px;
+    background-color: black;
+    color: rgb(13, 233, 13);
+    text-align: left;
+    padding: 10px;
+}
+
+.Threats__header{
+    font-size: 20px;
+    text-align: center;
+}

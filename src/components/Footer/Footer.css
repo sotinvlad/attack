@@ -1,7 +1,7 @@
 .Footer{
-    background-color: rgba(20, 20, 20, 0.85);
+    background-color: white;
     grid-area: f;
-    color: red;
+    color: black;
     text-align: center;
     height: 140px;
 }

@@ -3,7 +3,7 @@ import './Footer.css';
 const Footer = () => {
     return(
         <div className = 'Footer'>
-            <h1>DESCRIPTION</h1>
+            <h3>Created by KUSOK</h3>
         </div>
     )
 }

@@ -1,0 +1,16 @@
+.SecondChart{
+    grid-area: t3;
+    padding: 10px;
+    background-color: rgb(129, 129, 129,0.4);
+    border-radius: 5px;
+    border: 1px solid black ;
+
+}
+
+.SecondChart__title{
+    text-align: center;
+}
+
+.SecondChart__chart{
+    /* border: 2px solid black */
+}
