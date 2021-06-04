@@ -1,38 +1,16 @@
+import { useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import './LineChart.css';
 
 const LineChart = (props) => {
-    const totalDuration = 10000;
-    const delayBetweenPoints = totalDuration / props.data.length;
-    const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
-    const animation = {
-        x: {
-            type: 'number',
-            easing: 'linear',
-            duration: delayBetweenPoints,
-            from: NaN, // the point is initially skipped
-            delay(ctx) {
-                if (ctx.type !== 'data' || ctx.xStarted) {
-                    return 0;
-                }
-                ctx.xStarted = true;
-                return ctx.index * delayBetweenPoints;
-            }
-        },
-        y: {
-            type: 'number',
-            easing: 'linear',
-            duration: delayBetweenPoints,
-            from: previousY,
-            delay(ctx) {
-                if (ctx.type !== 'data' || ctx.yStarted) {
-                    return 0;
-                }
-                ctx.yStarted = true;
-                return ctx.index * delayBetweenPoints;
-            }
-        }
-    };
+
+    useEffect(() => {
+        setTimeout(() => props.dataTick(), 50);
+    })
+    const decimation = {
+        enabled: false,
+        algorithm: 'min-max',
+      };
     return (
         <div className='LineChart'>
             <h2 className='LineChart__title'>
@@ -51,31 +29,37 @@ const LineChart = (props) => {
                         }],
                     }}
                     options={{
-                        animation,
+                        animation: false,
+                        parsing: false,
                         interaction: {
                             intersect: false
                         },
                         plugins: {
-                            legend: false
+                            legend: false,
+                            decimation: decimation,
                         },
                         scales: {
                             x: {
-                                type: 'linear'
+                                type: 'linear',
+                                suggestedMax: props.startIndex + 400,
+                                source: 'auto',
+                                // Disabled rotation for performance
+                                maxRotation: 0,
+                                autoSkip: true,
+                            },
+                            y: {
+                                type: 'linear',
+                                suggestedMax: 600,
+                                suggestedMin: 0,
+                                source: 'auto',
+                                // Disabled rotation for performance
+                                maxRotation: 0,
+                                autoSkip: true,
                             }
                         }
                     }}
                 />
             </div>
-            <button onClick = {() => {
-                let data = [];
-                let prev = 100;
-                for (let i = 0; i < 10000; i++) {
-                  prev += 5 - Math.random() * 10;
-                  if (prev < 0) prev = 0;
-                  data.push({x: i, y: prev});
-                }
-                props.updateData(data);
-                }}>Update Data</button>
         </div>
     )
 }

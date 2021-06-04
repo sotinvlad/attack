@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import { updateData } from "../redux/mainPageReducer"
+import { dataTick, updateData } from "../redux/mainPageReducer"
 import LineChart from "./LineChart"
 
 
@@ -12,7 +12,8 @@ const LineChartContainer = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    data: state.mainPage.data
+    data: state.mainPage.currentData, 
+    startIndex: state.mainPage.startIndex
 })
 
-export default connect(mapStateToProps, { updateData })(LineChartContainer);
+export default connect(mapStateToProps, { updateData, dataTick })(LineChartContainer);

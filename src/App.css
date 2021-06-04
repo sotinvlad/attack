@@ -1,5 +1,4 @@
 .App{
-  margin : 0 5px;
   display: grid;
   grid-template-areas: 
   "h h"
