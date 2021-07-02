@@ -1,0 +1,32 @@
+.Solutions{
+    border: 1px solid black ;
+    border-radius: 5px;
+    grid-area: t4;
+    background-color: rgba(255, 255, 0, 0.185)
+}
+
+.Solutions__header{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+.Solutions__break{
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.315);
+    text-align: center;
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+.Solutions__break:hover{
+    background-color: rgba(4, 18, 99, 0.329)
+}
+.Solutions__freeze{
+    padding: 10px;
+    background-color: rgba(1, 37, 243, 0.315);
+    text-align: center;
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+.Solutions__freeze:hover{
+    background-color: rgba(5, 201, 87, 0.329)
+}

@@ -3,9 +3,8 @@ import { Line } from 'react-chartjs-2';
 import './SecondChart.css';
 
 const SecondChart = (props) => {
-debugger
     useEffect(() => {
-        setTimeout(() => props.secondDataTick(), 100);
+        setInterval(() => props.secondDataTick(), 100);
     })
     const decimation = {
         enabled: false,
@@ -41,7 +40,7 @@ debugger
                         scales: {
                             x: {
                                 type: 'linear',
-                                suggestedMax: props.startIndex + 400,
+                                suggestedMax: props.startIndex + 200,
                                 source: 'auto',
                                 // Disabled rotation for performance
                                 maxRotation: 0,

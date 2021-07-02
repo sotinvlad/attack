@@ -3,7 +3,7 @@
   grid-template-areas: 
   "h h"
   "t1 t2"
-  "t3 t3"
+  "t3 t4"
   "f f";
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;

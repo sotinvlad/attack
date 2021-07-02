@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import './LineChart.css';
@@ -5,8 +6,17 @@ import './LineChart.css';
 const LineChart = (props) => {
 
     useEffect(() => {
-        setTimeout(() => props.dataTick(), 50);
+        setInterval(() => props.dataTick(), 50);
     })
+    // useEffect(() => {
+    //     debugger
+    //     axios.get('http://127.0.0.1:5000/')
+    //     .then((response) =>{
+    //     debugger
+    //       props.updateData(response.data.lengths);
+    //       props.updateSecondData(response.data.hurst);
+    //     })
+    //   })
     const decimation = {
         enabled: false,
         algorithm: 'min-max',
@@ -41,7 +51,7 @@ const LineChart = (props) => {
                         scales: {
                             x: {
                                 type: 'linear',
-                                suggestedMax: props.startIndex + 400,
+                                suggestedMax: props.startIndex + 200,
                                 source: 'auto',
                                 // Disabled rotation for performance
                                 maxRotation: 0,

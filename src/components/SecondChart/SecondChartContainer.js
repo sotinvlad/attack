@@ -4,7 +4,6 @@ import SecondChart from "./SecondChart"
 
 
 const SecondChartContainer = (props) => {
-    debugger
     return(
         <div>
             <SecondChart {...props}/>
