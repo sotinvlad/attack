@@ -23,8 +23,8 @@ let initState = {
         startSecondIndex: 0,
         finishIndex: 0,
         finishSecondIndex: 0,
-        console: ['ПРЕДУПРЕЖДЕНИЕ: 192.168.0.1 опасное соединение','ПРЕДУПРЕЖДЕНИЕ: 192.168.0.2 опасное соединение'],
-        addresses: ['192.168.0.1','192.168.0.2']
+        console: [],
+        addresses: []
 }
 
 const mainPageReducer = (state = initState, action) => {
