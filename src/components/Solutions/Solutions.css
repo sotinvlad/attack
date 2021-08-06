@@ -17,9 +17,13 @@
     margin: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    user-select: none;
 }
 .Solutions__break:hover{
     background-color: rgba(4, 18, 99, 0.329)
+}
+.Solutions__break:active{
+    opacity: 0.8;
 }
 .Solutions__freeze{
     padding: 10px;
@@ -28,7 +32,11 @@
     margin: 10px 20px;
     border-radius: 5px;
     cursor:pointer;
+    user-select: none;
 }
 .Solutions__freeze:hover{
     background-color: rgba(5, 201, 87, 0.329)
+}
+.Solutions__freeze:active{
+    opacity: 0.8;
 }

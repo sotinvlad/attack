@@ -7,10 +7,17 @@ const Solutions = (props) => {
             <div className = 'Solutions__header'>
                 Предполагаемые решения
             </div>
-            {props.addresses.map((m,n) => <div className = 'Solutions__break' key = {n}> Разорвать соединение {m} </div>)}
+            {props.addresses.map((m,n) => <div className = 'Solutions__break' key = {n}> Заблокировать ip-адрес {m} </div>)}
             <div className = 'Solutions__freeze'>
-                Включить дополнительный защитный экран
+                Включить межсетевой экран
             </div>
+            <div className = 'Solutions__freeze'>
+                Сменить маршрут передачи данных
+            </div>
+            <div className = 'Solutions__freeze'>
+                Провести сканирование устройства
+            </div>
+
             
         </div>
     )

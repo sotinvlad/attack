@@ -4,23 +4,6 @@ const UPDATE_DATA = 'UPDATE_DATA';
 const CHART_TICK = 'CHART_TICK';
 const SECOND_CHART_TICK = 'SECOND_CHART_TICK';
 
-
-let data = [];
-// let prev = 100;
-// for (let i = 0; i < 10000; i++) {
-//   prev += 50 - Math.random() * 100;
-//   if (prev < 0) prev = 0;
-//   data.push({x: i, y: prev});
-// }
-let data2 = [];
-// let prev2 = 100;
-// for (let i = 0; i < 10000; i++) {
-//   prev2 += 5 - Math.random() * 10;
-//   if (prev2 < 0) prev2 = 0;
-//   data2.push({x: i, y: prev2});
-// }
-
-
 const dataToCurrent = (data, currentData, startIndex, finishIndex) => {
     let newCurrentData = [];
     if (data.length < finishIndex + 1){
@@ -32,8 +15,8 @@ const dataToCurrent = (data, currentData, startIndex, finishIndex) => {
 }
 
 let initState = {
-        data: data,
-        secondData: data2,
+        data: [],
+        secondData: [],
         currentData: [],
         currentSecondData: [],
         startIndex: 0,
@@ -53,8 +36,8 @@ const mainPageReducer = (state = initState, action) => {
                     ...state,
                     data: [state.data, ...action.data.lengths],
                     secondData: [state.secondData, ...action.data.hurst],
-                    console: [state.console, ...action.data.console],
-                    addresses: [state.addresses, ...action.data.addresses]
+                    console: action.data.console,
+                    addresses: action.data.addresses,
                 };
             }
 
