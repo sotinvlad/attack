@@ -21,7 +21,7 @@ const SecondChart = (props) => {
                         datasets: [{
                             label: 'Frequency',
                             data: props.data,
-                            fill: true,
+                            fill: false,
                             borderWidth: 1,
                             radius: 0,
                             borderColor: 'black',
@@ -48,7 +48,7 @@ const SecondChart = (props) => {
                             },
                             y: {
                                 type: 'linear',
-                                suggestedMax: 600,
+                                suggestedMax: 1,
                                 suggestedMin: 0,
                                 source: 'auto',
                                 // Disabled rotation for performance

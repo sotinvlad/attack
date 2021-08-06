@@ -4,8 +4,8 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LineChartContainer from './components/LineChart/LineChartContainer';
 import SecondChartContainer from './components/SecondChart/SecondChartContainer';
-import Solutions from './components/Solutions/Solutions';
-import Threats from './components/Threats/Threats';
+import SolutionsContainer from './components/Solutions/SolutionsContainer';
+import ThreatsContainer from './components/Threats/ThreatsContainer';
 
 const App = (props) => {
   useEffect(() => {
@@ -16,8 +16,8 @@ const App = (props) => {
         <Header />
         <LineChartContainer />
         <SecondChartContainer />
-        <Threats />
-        <Solutions />
+        <ThreatsContainer />
+        <SolutionsContainer />
         <Footer />
     </div>
   )

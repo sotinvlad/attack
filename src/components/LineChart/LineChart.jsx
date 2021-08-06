@@ -8,15 +8,7 @@ const LineChart = (props) => {
     useEffect(() => {
         setInterval(() => props.dataTick(), 50);
     })
-    // useEffect(() => {
-    //     debugger
-    //     axios.get('http://127.0.0.1:5000/')
-    //     .then((response) =>{
-    //     debugger
-    //       props.updateData(response.data.lengths);
-    //       props.updateSecondData(response.data.hurst);
-    //     })
-    //   })
+    
     const decimation = {
         enabled: false,
         algorithm: 'min-max',
@@ -32,7 +24,7 @@ const LineChart = (props) => {
                         datasets: [{
                             label: 'Frequency',
                             data: props.data,
-                            fill: true,
+                            fill: false,
                             borderWidth: 1,
                             radius: 0,
                             borderColor: 'black',

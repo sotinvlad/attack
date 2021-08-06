@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const UPDATE_DATA = 'UPDATE_DATA';
-const UPDATE_SECOND_DATA = 'UPDATE_SECOND_DATA';
 const CHART_TICK = 'CHART_TICK';
 const SECOND_CHART_TICK = 'SECOND_CHART_TICK';
 
@@ -21,6 +20,7 @@ let data2 = [];
 //   data2.push({x: i, y: prev2});
 // }
 
+
 const dataToCurrent = (data, currentData, startIndex, finishIndex) => {
     let newCurrentData = [];
     if (data.length < finishIndex + 1){
@@ -39,7 +39,9 @@ let initState = {
         startIndex: 0,
         startSecondIndex: 0,
         finishIndex: 0,
-        finishSecondIndex: 0
+        finishSecondIndex: 0,
+        console: ['ПРЕДУПРЕЖДЕНИЕ: 192.168.0.1 опасное соединение','ПРЕДУПРЕЖДЕНИЕ: 192.168.0.2 опасное соединение'],
+        addresses: ['192.168.0.1','192.168.0.2']
 }
 
 const mainPageReducer = (state = initState, action) => {
@@ -47,19 +49,15 @@ const mainPageReducer = (state = initState, action) => {
         
         case UPDATE_DATA:
             {
-                debugger
                 return {
                     ...state,
-                    data: [state.data, ...action.data],
+                    data: [state.data, ...action.data.lengths],
+                    secondData: [state.secondData, ...action.data.hurst],
+                    console: [state.console, ...action.data.console],
+                    addresses: [state.addresses, ...action.data.addresses]
                 };
             }
-        case UPDATE_SECOND_DATA:
-            {
-                return {
-                    ...state,
-                    secondData: [state.secondData, ...action.data],
-                };
-            }
+
         case CHART_TICK:
             { 
                 return {
@@ -88,16 +86,16 @@ const mainPageReducer = (state = initState, action) => {
 export default mainPageReducer;
 
 export const updateData = (data) => ({ type: UPDATE_DATA, data});
-export const updateSecondData = (data) => ({ type: UPDATE_SECOND_DATA, data});
 export const dataTick = () => ({ type: CHART_TICK });
 export const secondDataTick = () => ({ type: SECOND_CHART_TICK });
 
 export const appInit = () => dispatch =>{
-    debugger
-        axios.get('http://127.0.0.1:5000/')
-        .then((response) =>{
-        debugger
-          dispatch(updateData(response.data.lengths));
-          dispatch(updateSecondData(response.data.hurst));
-        })
+    // setInterval(()=>
+    //     axios.get('http://127.0.0.1:5000/')
+    //     .then((response) =>{
+    //     debugger
+    //     dispatch(updateData(response.data));
+    //     }), 5000
+    // )
+        
 }

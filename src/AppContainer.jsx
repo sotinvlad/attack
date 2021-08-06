@@ -4,7 +4,6 @@ import { appInit } from "./components/redux/mainPageReducer"
 
 
 const AppContainer = (props) => {
-    debugger
     return(
         <div>
             <App {...props}/>

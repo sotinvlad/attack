@@ -1,23 +1,15 @@
 import React from 'react';
 import './Solutions.css';
 
-const Solutions = () => {
+const Solutions = (props) => {
     return (
         <div className = 'Solutions'>
             <div className = 'Solutions__header'>
-                Solutions
+                Предполагаемые решения
             </div>
-            <div className = 'Solutions__break'>
-                Break the connection 192.168.32.1
-            </div>
-            <div className = 'Solutions__break'>
-                Break the connection 192.168.32.2
-            </div>
-            <div className = 'Solutions__break'>
-                Break the connection 192.168.32.3
-            </div>
+            {props.addresses.map((m,n) => <div className = 'Solutions__break' key = {n}> Разорвать соединение {m} </div>)}
             <div className = 'Solutions__freeze'>
-                Enable additional fans
+                Включить дополнительный защитный экран
             </div>
             
         </div>

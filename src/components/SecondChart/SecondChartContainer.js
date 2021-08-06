@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import { secondDataTick, updateSecondData } from "../redux/mainPageReducer"
+import { secondDataTick } from "../redux/mainPageReducer"
 import SecondChart from "./SecondChart"
 
 
@@ -16,4 +16,4 @@ const mapStateToProps = (state) => ({
     startIndex: state.mainPage.startSecondIndex
 })
 
-export default connect(mapStateToProps, { updateSecondData, secondDataTick })(SecondChartContainer);
+export default connect(mapStateToProps, { secondDataTick })(SecondChartContainer);

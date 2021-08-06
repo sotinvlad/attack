@@ -16,6 +16,7 @@
     text-align: center;
     margin: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .Solutions__break:hover{
     background-color: rgba(4, 18, 99, 0.329)
@@ -26,6 +27,7 @@
     text-align: center;
     margin: 10px 20px;
     border-radius: 5px;
+    cursor:pointer;
 }
 .Solutions__freeze:hover{
     background-color: rgba(5, 201, 87, 0.329)
