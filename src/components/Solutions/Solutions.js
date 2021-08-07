@@ -8,13 +8,13 @@ const Solutions = (props) => {
                 Предполагаемые решения
             </div>
             {props.addresses.map((m,n) => <div className = 'Solutions__break' key = {n}> Заблокировать ip-адрес {m} </div>)}
-            <div className = 'Solutions__freeze'>
+            <div className = 'Solutions__freeze' onClick = {() => {props.useSolution(1)}}>
                 Включить межсетевой экран
             </div>
-            <div className = 'Solutions__freeze'>
+            <div className = 'Solutions__freeze' onClick = {() => {props.useSolution(2)}}>
                 Сменить маршрут передачи данных
             </div>
-            <div className = 'Solutions__freeze'>
+            <div className = 'Solutions__freeze' onClick = {() => {props.useSolution(3)}}>
                 Провести сканирование устройства
             </div>
 
