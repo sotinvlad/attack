@@ -6,7 +6,7 @@ import './LineChart.css';
 const LineChart = (props) => {
 
     useEffect(() => {
-        setInterval(() => props.dataTick(), 50);
+        setInterval(() => props.dataTick(), 200);
     })
     
     const decimation = {
@@ -16,7 +16,7 @@ const LineChart = (props) => {
     return (
         <div className='LineChart'>
             <h2 className='LineChart__title'>
-                Траффик
+                Трафик
             </h2>
             <div className='LineChart__chart'>
                 <Line

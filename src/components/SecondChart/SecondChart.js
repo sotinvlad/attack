@@ -4,7 +4,7 @@ import './SecondChart.css';
 
 const SecondChart = (props) => {
     useEffect(() => {
-        setInterval(() => props.secondDataTick(), 100);
+        setInterval(() => props.secondDataTick(), 200);
     })
     const decimation = {
         enabled: false,
