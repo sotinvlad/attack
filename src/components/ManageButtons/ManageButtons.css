@@ -1,0 +1,23 @@
+.ManageButtons{
+    margin: 0 88%;
+}
+.ManageButtons__button {
+    width: 200px;
+    height: 34px;
+    border: 1px solid #C9CACC;
+    box-sizing: border-box;
+    border-radius: 4px; 
+    font-weight: bold;
+    text-align: center;
+    background-color: #818283;
+    user-select: none;
+    cursor: pointer;
+}
+
+.ManageButtons__button:hover {
+    opacity: 0.8;
+}
+
+.ManageButtons__button:active {
+    opacity: 0.9;
+}

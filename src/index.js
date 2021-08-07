@@ -5,12 +5,15 @@ import AppContainer from './AppContainer'
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './components/redux/redux';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store = {store}>
-    <AppContainer />
-    </Provider>
+    <BrowserRouter>
+      <Provider store = {store}>
+        <AppContainer />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
