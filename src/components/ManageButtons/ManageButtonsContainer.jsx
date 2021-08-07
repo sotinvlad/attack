@@ -1,5 +1,6 @@
 import { connect } from "react-redux"
 import ManageButtons from "./ManageButtons";
+import { useAttack } from '../redux/mainPageReducer'
 
 
 const ManageButtonsContainer = (props) => {
@@ -14,4 +15,4 @@ const mapStateToProps = (state) => ({
     
 })
 
-export default connect(mapStateToProps, {  })(ManageButtonsContainer);
+export default connect(mapStateToProps, { useAttack })(ManageButtonsContainer);

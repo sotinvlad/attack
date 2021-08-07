@@ -85,3 +85,7 @@ export const appInit = () => dispatch => {
 export const useSolution = (id) => dispatch => {
     axios.get(`http://127.0.0.1:5000/solve/${id}`);
 }
+
+export const useAttack = (id) => dispatch => {
+    axios.get(`http://127.0.0.1:5000/attack?name=${id}`);
+}
