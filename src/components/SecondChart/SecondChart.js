@@ -13,7 +13,7 @@ const SecondChart = (props) => {
     return (
         <div className='SecondChart'>
             <h2 className='SecondChart__title'>
-                Second Chart
+                Показатель Хёрста
             </h2>
             <div className='SecondChart__chart'>
                 <Line

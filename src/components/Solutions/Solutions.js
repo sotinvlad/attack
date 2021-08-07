@@ -5,7 +5,7 @@ const Solutions = (props) => {
     return (
         <div className = 'Solutions'>
             <div className = 'Solutions__header'>
-                Предполагаемые решения
+                Меры по защите сети передачи данных
             </div>
             {props.addresses.map((m,n) => <div className = 'Solutions__break' key = {n}> Заблокировать ip-адрес {m} </div>)}
             <div className = 'Solutions__freeze' onClick = {() => {props.useSolution(1)}}>

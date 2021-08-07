@@ -16,7 +16,7 @@ const LineChart = (props) => {
     return (
         <div className='LineChart'>
             <h2 className='LineChart__title'>
-                Line Chart
+                Траффик
             </h2>
             <div className='LineChart__chart'>
                 <Line
