@@ -1,5 +1,6 @@
 .ManageButtons{
-    margin: 0 88%;
+    margin: 0;
+    display: flex;
 }
 .ManageButtons__button {
     width: 200px;
@@ -12,6 +13,7 @@
     background-color: #818283;
     user-select: none;
     cursor: pointer;
+
 }
 
 .ManageButtons__button:hover {
@@ -20,4 +22,7 @@
 
 .ManageButtons__button:active {
     opacity: 0.9;
+}
+
+.ManageButtons__input{
 }

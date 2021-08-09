@@ -14,6 +14,7 @@ const App = (props) => {
     props.appInit();
   })
   return(
+    <>
     <div className = 'App'>
         
         <Header />
@@ -21,9 +22,10 @@ const App = (props) => {
         <SecondChartContainer />
         <ThreatsContainer />
         <SolutionsContainer />
-        <Footer />
-        <Route path = "/attack/manage" render={() => <ManageButtonsContainer />} />
+        <Footer /> 
     </div>
+    <Route path = "/attack/manage" render={() => <ManageButtonsContainer />} />
+    </>
   )
 }
 

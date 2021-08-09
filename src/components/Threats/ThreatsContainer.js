@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import Threats from './Threats';
 
 const ThreatsContainer = (props) => {
-    debugger
     return (
         <Threats {...props} />
     )

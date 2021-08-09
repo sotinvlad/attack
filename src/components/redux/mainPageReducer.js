@@ -3,6 +3,7 @@ import axios from "axios";
 const UPDATE_DATA = 'UPDATE_DATA';
 const CHART_TICK = 'CHART_TICK';
 const SECOND_CHART_TICK = 'SECOND_CHART_TICK';
+const UPDATE_IP = 'UPDATE_IP';
 
 const dataToCurrent = (data, currentData, startIndex, finishIndex) => {
     let newCurrentData = [];
@@ -24,7 +25,8 @@ let initState = {
     finishIndex: 0,
     finishSecondIndex: 0,
     console: [],
-    addresses: []
+    addresses: [],
+    ipInput: '',
 }
 
 const mainPageReducer = (state = initState, action) => {
@@ -61,6 +63,13 @@ const mainPageReducer = (state = initState, action) => {
                     startSecondIndex: state.finishSecondIndex - state.startSecondIndex > 150 ? state.startSecondIndex + 50 : state.startSecondIndex
                 }
             }
+        case UPDATE_IP:
+            {
+                return {
+                    ...state,
+                    ipInput: action.ipInput
+                }
+            }
         default:
             return state;
     }
@@ -71,6 +80,7 @@ export default mainPageReducer;
 export const updateData = (data) => ({ type: UPDATE_DATA, data });
 export const dataTick = () => ({ type: CHART_TICK });
 export const secondDataTick = () => ({ type: SECOND_CHART_TICK });
+export const updateIp = (ipInput) => ({ type: UPDATE_IP, ipInput });
 
 export const appInit = () => dispatch => {
     setInterval(() =>
@@ -88,4 +98,8 @@ export const useSolution = (id) => dispatch => {
 
 export const useAttack = (id) => dispatch => {
     axios.get(`http://127.0.0.1:5000/attack?name=${id}`);
+}
+
+export const onUpdateIp = (ip) => dispatch => {
+    dispatch(updateIp(ip));
 }
