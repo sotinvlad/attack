@@ -12,7 +12,7 @@ const ManageButtons = (props) => {
 
     const onSubmit = () => {
         let text = props.ipInput;
-
+        props.setBackendIP(text);
         textAreaRef.current.value = '';
     }
 

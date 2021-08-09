@@ -108,7 +108,7 @@ export const useAttack = (id) => dispatch => {
     axios.get(`http://${getBackendIP()}:5000/attack?name=${id}`);
 }
 
-export const inputBackEndIP = (val) => dispatch => {
+export const setBackendIP = (val) => dispatch => {
     localStorage.setItem('backend_ip', val);
 }
 export const onUpdateIp = (ip) => dispatch => {

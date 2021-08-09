@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 import ManageButtons from "./ManageButtons";
-import { onUpdateIp, updateIp, useAttack } from '../redux/mainPageReducer'
+import { onUpdateIp, updateIp, useAttack, setBackendIP } from '../redux/mainPageReducer'
 
 
 const ManageButtonsContainer = (props) => {
@@ -15,4 +15,4 @@ const mapStateToProps = (state) => ({
     ipInput: state.mainPage.ipInput
 })
 
-export default connect(mapStateToProps, { useAttack, onUpdateIp })(ManageButtonsContainer);
+export default connect(mapStateToProps, { useAttack, onUpdateIp, setBackendIP })(ManageButtonsContainer);
