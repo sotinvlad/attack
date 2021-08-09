@@ -66,6 +66,10 @@ const mainPageReducer = (state = initState, action) => {
     }
 }
 
+const getBackendIP = () => {
+    return localStorage.getItem('backend_ip');
+}
+
 export default mainPageReducer;
 
 export const updateData = (data) => ({ type: UPDATE_DATA, data });
@@ -73,8 +77,11 @@ export const dataTick = () => ({ type: CHART_TICK });
 export const secondDataTick = () => ({ type: SECOND_CHART_TICK });
 
 export const appInit = () => dispatch => {
+    if (localStorage.getItem('backend_ip') == null){
+        localStorage.setItem('backend_ip','127.0.0.1');
+    }
     setInterval(() =>
-        axios.get('http://127.0.0.1:5000/')
+        axios.get(`http://${getBackendIP()}:5000/`)
         .then((response) => {
             debugger
             dispatch(updateData(response.data));
@@ -83,13 +90,14 @@ export const appInit = () => dispatch => {
 }
 
 export const useSolution = (id) => dispatch => {
-    axios.get(`http://127.0.0.1:5000/solve/${id}`);
+    let ip = localStorage.getItem('backend_ip');
+    axios.get(`http://${getBackendIP()}:5000/solve/${id}`);
 }
 
 export const useAttack = (id) => dispatch => {
-    axios.get(`http://127.0.0.1:5000/attack?name=${id}`);
+    axios.get(`http://${getBackendIP()}:5000/attack?name=${id}`);
 }
 
 export const inputBackEndIP = (val) => dispatch => {
-    
+    localStorage.setItem('backend_ip', val);
 }
