@@ -89,3 +89,7 @@ export const useSolution = (id) => dispatch => {
 export const useAttack = (id) => dispatch => {
     axios.get(`http://127.0.0.1:5000/attack?name=${id}`);
 }
+
+export const inputBackEndIP = (val) => dispatch => {
+    
+}
