@@ -111,4 +111,6 @@ export const useAttack = (id) => dispatch => {
 export const inputBackEndIP = (val) => dispatch => {
     localStorage.setItem('backend_ip', val);
 }
-
+export const onUpdateIp = (ip) => dispatch => {
+    dispatch(updateIp(ip));
+}
